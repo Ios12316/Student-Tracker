@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const studentSchema = new mongoose.Schema({
     firstName: {
@@ -34,6 +34,6 @@ const studentSchema = new mongoose.Schema({
         default: Date.now
     }
 })
-module.exports = mongoose.model("Student", studentSchema);
+module.exports = mongoose.model('Student', studentSchema);
 
 

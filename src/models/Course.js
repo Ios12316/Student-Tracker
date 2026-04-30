@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 const courseSchema = new mongoose.Schema({
     title: {
         type: String,
@@ -22,12 +22,12 @@ const courseSchema = new mongoose.Schema({
     },
     student: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Student",
+        ref: 'Student',
         required: true
     },
     grade: {
         type: String,
-        enum: ["A", "B", "C", "D", "F"],
+        enum: ['A', 'B', 'C', 'D', 'F'],
         default: null
     },
     completedAt:{
@@ -35,4 +35,4 @@ const courseSchema = new mongoose.Schema({
         default: null
     }
 })
-module.exports = mongoose.model("Course", courseSchema);
+module.exports = mongoose.model('Course', courseSchema);
