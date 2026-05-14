@@ -8,7 +8,11 @@ const cookieParser = require('cookie-parser');
 const cors = require('cors');
 
 const app = express();
-connectDB();
+
+app.use(async (req, res, next) => {
+    await connectDB();
+    next();
+});
 app.use(cookieParser())
 app.use(logger);
 app.use(express.json());
